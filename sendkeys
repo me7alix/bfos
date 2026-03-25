@@ -9,6 +9,8 @@ import subprocess
 import sys
 import time
 
+DELAY = 0.04
+
 # Same mappings as the original
 UPCASE = [(c, f"shift-{c.lower()}") for c in "ABCDEFGHIJKLMNOPQRSTUVWXYZ"]
 KEYS = {
@@ -46,7 +48,7 @@ class Sendkeys:
         else:
             print(f"sendkey {k}")
             sys.stdout.flush()
-        time.sleep(0.025)
+        time.sleep(DELAY)
 
     def run(self):
         s = self.args.string
