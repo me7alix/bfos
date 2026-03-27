@@ -13,11 +13,11 @@ section .bss
 
 section .text
 start:
-    xor ax, ax
-    mov ds, ax
-    mov ss, ax
-    mov si, ax
-    mov di, ax
+	xor ax, ax
+	mov ds, ax
+	mov ss, ax
+	mov si, ax
+	mov di, ax
 
 	; zero mem
 	xor ax, ax
@@ -187,7 +187,6 @@ start:
 
 	cmp cx, 0
 	jne .lcb_sob
-	; dec si
 	jmp .pit
 .lcb_sob:
 	
